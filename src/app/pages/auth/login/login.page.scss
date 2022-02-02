@@ -1,0 +1,104 @@
+.mobile_auth {
+
+  .content {
+
+    height: 100vh;
+    @media (max-width: 1024px) {
+      height: 85vh;
+      margin: auto;
+    }
+    @media (max-width: 425px) {
+      width: 100%;
+      margin: auto;
+    }
+    .name_screen {
+      font-weight: 800;
+      position: fixed;
+      left: 45%;
+    }
+
+
+    .login{
+      margin-right: 64%;
+      font-size: 25px;
+    }
+    ion-text {
+      color: var(--ion-color-primary);
+    }
+  }
+  ion-button {
+    --background: linear-gradient(to right, var(--ion-color-primary), var(--ion-color-primary));
+    --background-activated: linear-gradient(to right, var(--ion-color-primary), var(--ion-color-primary));
+    --background-focused: linear-gradient(to right, var(--ion-color-primary), var(--ion-color-primary));
+    --background-hover: linear-gradient(to right, var(--ion-color-primary), var(--ion-color-primary));
+  }
+  .vertical_line{
+    width: 85%;
+    background-color: #E8EBED;
+    height: 2px;
+
+  }
+  .font_color{
+    color:#B9BDC2;
+  }
+  .super-sub-title {
+    a {
+      text-decoration: none;
+      color: var(--ion-color-primary);
+      font-weight: bold;
+    }
+  }
+}
+
+ion-card {
+  background-color: white;
+  box-shadow: none;
+}
+
+.login-input {
+  color: #555;
+  .icon {
+    background: white;
+    font-size: 1.5rem;
+    padding: 2px;
+    height: 47px;
+  }
+  .input {
+    width: 85%;
+    margin: auto;
+    input {
+      font-size: 14px;
+      text-align: left;
+      padding: 1rem;
+      height: 47px;
+      width: 100%;
+      outline: none;
+      border-top:none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  p {
+    a {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ion-color-primary);
+    }
+  }
+}
+
+.sing-up {
+  .super-sub-title {
+    a {
+      text-decoration: none;
+      color: var(--ion-color-primary);
+      font-weight: bold;
+    }
+    color: var(--ion-color-primary);
+    font-weight: 700;
+    font-size: 22px;
+  }
+}
+
+

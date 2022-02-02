@@ -1,9 +1,79 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-content-background-city mobile_auth">
+  <div class="background_city">
+    <ion-row>
+      <ion-col class="ion-padding-top" offsetXs="0" offsetSm="0" offsetMd="3" sizeXs="12" sizeSm="12" sizeMd="6"
+               offsetLg="3" sizeLg="6" sizeXl="6">
+        <div class="content ion-padding-top ion-text-center">
+          <div class="login-input">
+            <form [formGroup]="loginForm" autocomplete="off">
+              <ion-row class="noti_cards ion-padding-top">
+                <ion-col sizeXs="12" sizeSm="12" sizeMd="12" offsetLg="2" sizeLg="8">
+                  <ion-card>
+                    <ion-row class="ion-padding-top">
+                      <ion-col size="12">
+                        <div #inputDiv class="input" style="display: flex">
+                          <div class="verticle-align" style="background-color: white; "></div>
+                          <input maxlength="10" formControlName="username" type="tel"
+                                 placeholder="Enter your mobile number">
+                          <div class="verticle-align"
+                               style="background-color: white;    "></div>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col size="10">
 
-<ion-content>
+                        <div class="input">
+                          <input formControlName="password"
+                                 [type]="(passwordIcon === 'eye-off') ? 'password' : 'text'"
+                                 placeholder="Enter your password">
+                        </div>
+                      </ion-col>
+                      <ion-col size="2">
+                        <div (click)="(passwordIcon === 'eye') ? passwordIcon = 'eye-off' : passwordIcon = 'eye'"
+                             class="icon verticle-align ion-float-start">
+                          <ion-icon [name]="passwordIcon"></ion-icon>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col [size]="'12'">
+                        <div class="margin text-right">
+
+                          <p class="text-right" style="color:#E66030;">
+                            <a (click)="goToForgotPassword()"> Forgot Password?</a>
+                          </p>
+
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+            </form>
+          </div>
+          <div style="">
+            <ion-row class="ion-padding-horizontal">
+              <ion-col offsetXs="3" sizeXs="6" offsetLg="4" sizeLg="4">
+                <ion-button class="" [disabled]="loginForm.invalid"
+                            (click)="loginUser($event)" [expand]="'block'" [shape]="'round'">Login
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </div>
+
+          <div>
+            <ion-row>
+              <ion-col size="12" class="verticle-align">
+                <div class="sing-up ion-margin-top ion-text-center">
+                  <p class="super-sub-title">New User? <a (click)="goToSignUp()"> Signup</a></p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
 
 </ion-content>
